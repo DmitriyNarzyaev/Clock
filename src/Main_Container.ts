@@ -12,6 +12,15 @@ export default class Main_Container extends Container {
 	private _gearWheel:Sprite;
 	private _gearWheelContainer2:Container;
 	private _gearWheel2:Sprite;
+	private _secondHandContainer:Container;
+	private _secondHand:Sprite;
+	private _minuteHandContainer:Container;
+	private _minuteHand:Sprite;
+	private _hourHandContainer:Container;
+	private _hourHand:Sprite;
+
+
+
 
 	constructor() {
 		super();
@@ -23,10 +32,14 @@ export default class Main_Container extends Container {
 		loader.add("background", "background.jpg");
 		loader.add("dial", "dial.png");
 		loader.add("gearWheel", "gear_wheel.png");
+		loader.add("seconds", "seconds.png");
+		loader.add("minutes", "minutes.png");
+		loader.add("hours", "hours.png");
 		
 		loader.on("complete", ()=> {
 			this.initBackground();
 			this.initAnalogClock();
+			this.initHands();
 		});
 		loader.load();
 	}
@@ -60,5 +73,34 @@ export default class Main_Container extends Container {
 		this.addChild(this._dial);
 		this._dial.x = this._centerX - this._dial.width/2;
 		this._dial.y = this._centerY - this._dial.height/2;
+	}
+
+	private initHands():void {
+		this._secondHandContainer = new Container;
+		this.addChild(this._secondHandContainer);
+		this._secondHandContainer.x = this._centerX;
+		this._secondHandContainer.y = this._centerY;
+		this._secondHand = Sprite.from("seconds");
+		this._secondHandContainer.addChild(this._secondHand);
+		this._secondHand.x -= this._secondHand.width/2;
+		this._secondHand.y -= this._secondHand.height;
+
+		this._minuteHandContainer = new Container;
+		this.addChild(this._minuteHandContainer);
+		this._minuteHandContainer.x = this._centerX;
+		this._minuteHandContainer.y = this._centerY;
+		this._minuteHand = Sprite.from("minutes");
+		this._minuteHandContainer.addChild(this._minuteHand);
+		this._minuteHand.x -= this._minuteHand.width/2;
+		this._minuteHand.y -= this._minuteHand.height;
+
+		this._hourHandContainer = new Container;
+		this.addChild(this._hourHandContainer);
+		this._hourHandContainer.x = this._centerX;
+		this._hourHandContainer.y = this._centerY;
+		this._hourHand = Sprite.from("hours");
+		this._hourHandContainer.addChild(this._hourHand);
+		this._hourHand.x -= this._hourHand.width/2;
+		this._hourHand.y -= this._hourHand.height;
 	}
 }
