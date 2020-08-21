@@ -18,7 +18,7 @@ export default class Main_Container extends Container {
 	private _minuteHand:Sprite;
 	private _hourHandContainer:Container;
 	private _hourHand:Sprite;
-
+	private _handsPivot:Sprite;
 
 
 
@@ -35,7 +35,7 @@ export default class Main_Container extends Container {
 		loader.add("seconds", "seconds.png");
 		loader.add("minutes", "minutes.png");
 		loader.add("hours", "hours.png");
-		
+		loader.add("pivot", "pivot.png");
 		loader.on("complete", ()=> {
 			this.initBackground();
 			this.initAnalogClock();
@@ -102,5 +102,10 @@ export default class Main_Container extends Container {
 		this._hourHandContainer.addChild(this._hourHand);
 		this._hourHand.x -= this._hourHand.width/2;
 		this._hourHand.y -= this._hourHand.height;
+
+		this._handsPivot = Sprite.from("pivot");
+		this.addChild(this._handsPivot);
+		this._handsPivot.x = this._centerX - this._handsPivot.width/2;
+		this._handsPivot.y = this._centerY - this._handsPivot.height/2;
 	}
 }
