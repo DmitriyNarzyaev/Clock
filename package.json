@@ -1,0 +1,44 @@
+{
+  "name": "starter",
+  "description": "",
+  "author": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PavelNarzyaev/pixi-starter.git"
+  },
+  "scripts": {
+    "npm-install": "npm --loglevel=error install",
+    "local-test": "webpack --watch --config webpack.config.js",
+    "local-release": "webpack --watch --config webpack.config.js --env.release",
+    "server-test": "webpack --watch --config webpack.config.js --env.server",
+    "server-release": "webpack --watch --config webpack.config.js --env.server --env.release"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@types/node": "^12.12.14",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "circular-dependency-plugin": "^5.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "open-browser-webpack-plugin": "^0.0.5",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "pixi.js": "^5.2.0",
+    "webpack": "^4.41.2"
+  }
+}

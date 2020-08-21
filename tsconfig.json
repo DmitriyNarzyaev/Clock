@@ -1,0 +1,25 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"lib": [
+			"dom",
+			"es2015",
+			"es2016"
+		],
+		"outDir": "./out",
+		"target": "es2016",
+		"module": "es2015",
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"sourceMap": true,
+		"allowJs": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"./out/*"
+	]
+}

@@ -1,0 +1,5 @@
+/.idea
+/node_modules
+/out
+debug.log
+package-lock.json
