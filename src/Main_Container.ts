@@ -19,12 +19,16 @@ export default class Main_Container extends Container {
 	private _hourHandContainer:Container;
 	private _hourHand:Sprite;
 	private _handsPivot:Sprite;
-
+	private _date:Date;
 
 
 	constructor() {
 		super();
 		this.initImages();
+		this._date = new Date();
+		window.setInterval(() => {
+			this.timerHandler();
+		}, 1000);
 	}
 
 	private initImages():void {
@@ -107,5 +111,19 @@ export default class Main_Container extends Container {
 		this.addChild(this._handsPivot);
 		this._handsPivot.x = this._centerX - this._handsPivot.width/2;
 		this._handsPivot.y = this._centerY - this._handsPivot.height/2;
+	}
+
+	private timerHandler():void
+	{
+		this._date.setSeconds(this._date.getSeconds() + 1);
+
+		this._gearWheelContainer.rotation += .05;
+		this._gearWheelContainer2.rotation -= .05;
+
+		this._secondHandContainer.rotation = (this._date.getSeconds()/(30/Math.PI));
+		this._minuteHandContainer.rotation = (this._date.getMinutes()/(30/Math.PI))
+			+ (this._secondHandContainer.rotation/60);
+			this._hourHandContainer.rotation = (this._date.getHours()/(6/Math.PI))
+			+ (this._minuteHandContainer.rotation/12);
 	}
 }
