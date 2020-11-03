@@ -6,7 +6,7 @@ const { CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
 
 module.exports = env => {
-	const outFolder = "./out";
+	const outFolder = "./docs";
 	const sourceFolder = "./src";
 	const assetsFolder = "./assets";
 	
