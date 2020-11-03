@@ -21,7 +21,6 @@ export default class Main_Container extends Container {
 	private _handsPivot:Sprite;
 	private _date:Date;
 
-
 	constructor() {
 		super();
 		this.initImages();

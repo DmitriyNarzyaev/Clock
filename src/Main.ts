@@ -5,10 +5,9 @@ import MainContainer from "./Main_Container";
 
 export class Main extends Container {
 	public static pixiApp:Application;
+	public static BORDER_SIZE:number = 200;
 	private _size:Rectangle;
 	private _mainContainer:MainContainer;
-
-	public static BORDER_SIZE:number = 200;
 
 	constructor(canvasId:string) {
 		super();
