@@ -1,6 +1,7 @@
 Obline Clock
 
 You can start this game by clicking on the link https://dmitriynarzyaev.github.io/Clock
+
 Deployment
 
     Download and install Node.js and npm (https://www.npmjs.com/get-npm)
