@@ -1,4 +1,4 @@
-Obline Clock
+Online Clock
 
 You can start this game by clicking on the link https://dmitriynarzyaev.github.io/Clock
 
